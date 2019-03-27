@@ -1,0 +1,22 @@
+.jumbotron {
+    background-image: url("../images/zermatt.JPG");
+    /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+    background-color: rgba(8, 12, 241, 0.6);
+}
+
+#articles {
+    margin-left: 15%;
+}
+
+img {
+    height: 200px;
+    width: 260px;
+}

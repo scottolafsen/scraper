@@ -1,27 +1,23 @@
 <div id="wrapper">
-     <ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link active" href="/">Home</a>
-  </li>
-  {{!-- <li class="nav-item">
-    <a class="nav-link" href="/scrape">Scrape</a>
-  </li> --}}
-  
-</ul>
-     <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Ski News</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-    <button type="button" class="btn btn-primary">Scrape Articles!</button>
-    <button type="button" class="btn btn-primary">Clear Articles</button>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="/saved">Saved Articles</a>
+    </li>
+
+  </ul>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Ski News</h1>
+      <p class="lead">Get the Latest Ski News From Sites Across the Internet</p>
+    </div>
+  </div>
+  <div class="row">
+    <ul class="list-group" id="articles">
+    </ul>
   </div>
 </div>
-      <div class="row" >
-      <ul class="list-group" id="articles">
- 
-</ul>
-</div>
-      <div class="row" id="notes"></div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="saved.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="saved.js"></script>
