@@ -10,6 +10,10 @@ var PORT = process.env.PORT || 3000;
 var app = express();
 var routes = express.Router();
 
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scrapermagnum"
+
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+
 // ######## MIDDLEWARE ############
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
@@ -18,7 +22,7 @@ app.use(express.static("public"));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 app.use(routes);
-mongoose.connect("mongodb://localhost/scrapermagnum", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost/scrapermagnum", { useNewUrlParser: true });
 
 // ######## HTML ROUTES ############
 app.get("/", function (req, res) {
