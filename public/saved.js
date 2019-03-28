@@ -8,9 +8,12 @@ function loadPage() {
         $("#articles").append("<li class=list-group-item data-id=" + data[i]._id + "><img src=" + data[i].img + " class=img-fluid alt=Responsive image><a href=" + data[i].link + " " + "class=btn btn-primary stretched-link>" + data[i].title + "</a><btn type=button class= 'btn btn-danger delete' data-id=" + data[i]._id + ">Delete</btn>" +
           "<br /><form> <div class=form-group> <label for=title" + data[i]._id + "> Title </label><input type=text class=form-control id=title" + data[i]._id + "><label for=body" + data[i]._id + "> Write Note </label><input type=text class=form-control id=body" + data[i]._id + "><btn type=button class= 'btn btn-success note' data-id=" + data[i]._id + ">Write Note</btn></div> </form>");
       }
-      if (data[i].note) {
-        $("#articles").append("<li class=list-group-item>" + data[i].note.title + " ||  " + data[i].note.body + "    <btn type=button class= 'btn btn-danger deletenote' data-id=" + data[i].note._id + ">x</btn></li>");
-      }  $("#articles").append("</li>");
+      var note = data[i].note
+      if (note.length > 0) {
+        for (var j = 0; j < note.length; j++){
+        $("#articles").append("<li class=list-group-item>" + note[j].title + " ||  " + note[j].body + "    <btn type=button class= 'btn btn-danger deletenote' data-id=" + note[j]._id + ">x</btn></li>");
+      }  
+    }
     }
   })
 };

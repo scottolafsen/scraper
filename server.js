@@ -10,7 +10,7 @@ var PORT = process.env.PORT || 3000;
 var app = express();
 var routes = express.Router();
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scrapermagnum"
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scrapegoater"
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
@@ -177,7 +177,7 @@ app.post("/articles/:id", function (req, res) {
   console.log(req.body);
   db.Note.create(req.body)
     .then(function (dbNote) {
-      return db.Article.findOneAndUpdate({ _id: req.params.id }, { note: dbNote._id }, { new: true });
+      return db.Article.findOneAndUpdate({ _id: req.params.id }, { $push: { note: dbNote._id  } }, { new: true });
     })
     .then(function (dbArticle) {
       res.json(dbArticle);
