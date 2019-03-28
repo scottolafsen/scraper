@@ -1,5 +1,7 @@
 ## To run the Sample be sure to do the following
 
+link to heroku app https://serene-spire-42320.herokuapp.com/
+
 *in your terminal in the root of the folder run ` npm install`
 
 * open a new Terminal and run `mongod` (Keep this termianl Open)
