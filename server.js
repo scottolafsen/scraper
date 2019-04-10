@@ -139,7 +139,7 @@ app.get("/scrape/tetongravity", function (req, res) {
       var result = {};
       result.title = $(this)
       .attr("title");
-      result.link = $(this)
+      result.link = "https://www.tetongravity.com" + $(this)
       .attr("href");
       result.img = $(this)
       .children("picture").children("img")

@@ -1,15 +1,12 @@
 .jumbotron {
-    background-image: url("../images/zermatt.JPG");
-    /* Full height */
+    background-image: url("../images/twins.JPG");
   height: 100%; 
-
-  /* Center and scale the image nicely */
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
 }
 body {
-    background-color: rgba(8, 12, 241, 0.6);
+    background-color: rgba(13, 13, 15, 0.7);
 }
 
 #articles {
@@ -19,4 +16,23 @@ body {
 img {
     height: 200px;
     width: 260px;
+}
+
+.display-4 {
+    color: bisque;
+    font-size: 100px;
+}
+
+.lead {
+    color: bisque;
+}
+
+.tab {
+    font-size: 30px;
+    color: bisque
+}
+
+.back {
+    background-color: brown;
+
 }
